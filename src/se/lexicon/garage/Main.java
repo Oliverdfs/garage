@@ -1,20 +1,35 @@
 package se.lexicon.garage;
 
+import java.sql.SQLException;
+import java.util.ArrayList;
+
 public class Main {
 
-    public static void main(String[] args) {
-        Garage garage = new Garage();
+    public static void main(String[] args) throws SQLException {
+       /* ArrayList<Vehicle> vehicles = MySQLConnection.getVehiclesDB();
 
-        for(int i=0; i<5; i++) {
-            garage.park(new Car("Volvo"));
-        }
+                for(Vehicle vehicle : vehicles){
+                    System.out.println(vehicle);
+                }
 
-        System.out.println(garage.find(0));
+    MySQLConnection.saveVehicleDB(new Car("Audi", 320));*/
+      UserInterface ui = new UserInterface(new Garage());
 
-        System.out.println(garage);
+      ui.parkVehicle();
 
-        garage.unpark(0);
+       // Garage garage = new Garage();
+      //  ArrayList<Vehicle> vehicles = MySQLConnection.getVehiclesDB();
 
-        UserInterface ui = new UserInterface(garage);
+     //   for(int i=0; i<5; i++) {
+     //       garage.park(new Car("Volvo"));
+     //   }
+
+      //  System.out.println(garage.find(0));
+
+      //  System.out.println(garage);
+
+      //  garage.unpark(0);
+
+
     }
 }
